@@ -1,0 +1,597 @@
+/* CONFIGURACIÓN GENERAL */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #0b0b0f;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+
+/* ENCABEZADO Y NAVEGACIÓN */
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 25px 40px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* Logo */
+
+.logo {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+
+/* Menú */
+
+.nav-links {
+    list-style: none;
+
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #e50914;
+}
+
+
+/* BANNER PRINCIPAL */
+
+.hero {
+    min-height: 700px;
+
+    display: flex;
+    align-items: center;
+
+    position: relative;
+
+    padding: 120px 8% 80px;
+
+    /* Imagen principal del banner. */
+    background-image:
+        linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0.95),
+            rgba(0, 0, 0, 0.55),
+            rgba(0, 0, 0, 0.2)
+        ),
+        url("../img/banner.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* Contenido del Hero */
+
+.hero-content {
+    max-width: 650px;
+
+    animation: aparecer 1.2s ease;
+}
+
+
+/* Texto pequeño */
+
+.hero-subtitle {
+    color: #e50914;
+    font-size: 0.9rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+
+/* Título principal */
+
+.hero h1 {
+    font-size: clamp(3rem, 6vw, 5.5rem);
+    line-height: 1.05;
+    margin-bottom: 25px;
+}
+
+
+/* Descripción */
+
+.hero-description {
+    max-width: 550px;
+
+    color: #dddddd;
+
+    font-size: 1.1rem;
+
+    margin-bottom: 35px;
+}
+
+
+/* BOTONES */
+
+.btn {
+    display: inline-block;
+
+    padding: 13px 25px;
+
+    background-color: #e50914;
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    border-radius: 5px;
+
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #b20710;
+    transform: translateY(-3px);
+}
+
+
+/* Botón secundario */
+
+.btn-secondary {
+    background-color: transparent;
+    border: 1px solid #e50914;
+}
+
+.btn-secondary:hover {
+    background-color: #e50914;
+}
+
+
+/* CONFIGURACIÓN GENERAL DE SECCIONES */
+
+.upcoming,
+.about {
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 90px 40px;
+}
+
+
+/* ENCABEZADO DE SECCIONES */
+
+.section-header {
+    margin-bottom: 45px;
+}
+
+.section-subtitle {
+    color: #e50914;
+
+    font-size: 0.85rem;
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 10px;
+}
+
+.section-header h2,
+.about h2 {
+    font-size: 2.5rem;
+
+    line-height: 1.2;
+
+    margin-bottom: 15px;
+}
+
+.section-header > p:last-child {
+    color: #aaaaaa;
+}
+
+
+/* MOSAICO DE PELÍCULAS */
+
+.movies-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 30px;
+}
+
+
+/* TARJETAS DE PELÍCULAS */
+
+.movie-card {
+    background-color: #17171c;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    /* Transición */
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* Efecto mouse */
+
+.movie-card:hover {
+    transform: translateY(-10px);
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.5);
+}
+
+
+/* Imagen */
+
+.movie-card img {
+    width: 100%;
+
+    height: 400px;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.4s ease;
+}
+
+
+/* Zoom de la imagen */
+
+.movie-card:hover img {
+    transform: scale(1.04);
+}
+
+
+/* Información */
+
+.movie-info {
+    padding: 25px;
+}
+
+
+/* Fecha */
+
+.movie-date {
+    display: block;
+
+    color: #e50914;
+
+    font-size: 0.85rem;
+
+    font-weight: bold;
+
+    margin-bottom: 8px;
+}
+
+
+/* Título */
+
+.movie-info h3 {
+    font-size: 1.5rem;
+
+    margin-bottom: 12px;
+}
+
+
+/* Descripción */
+
+.movie-info p {
+    color: #aaaaaa;
+
+    font-size: 0.95rem;
+
+    margin-bottom: 20px;
+}
+
+
+/* Enlace */
+
+.movie-link {
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: color 0.3s ease;
+}
+
+.movie-link:hover {
+    color: #e50914;
+}
+
+
+/* BOTÓN DE LA SECCIÓN */
+
+.section-button {
+    text-align: center;
+
+    margin-top: 45px;
+}
+
+
+/* SECCIÓN "ABOUT" */
+
+.about {
+    max-width: none;
+
+    padding-left: 8%;
+    padding-right: 8%;
+
+    background-color: #111116;
+}
+
+.about-content {
+    max-width: 750px;
+}
+
+.about h2 {
+    margin-bottom: 25px;
+}
+
+.about-content > p:not(.section-subtitle) {
+    color: #aaaaaa;
+
+    margin-bottom: 20px;
+}
+
+.about .btn {
+    margin-top: 15px;
+}
+
+
+/* FOOTER */
+
+.footer {
+    background-color: #070709;
+
+    padding: 60px 8% 20px;
+}
+
+.footer-content {
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 50px;
+}
+
+
+/* Información de CineMax */
+
+.footer-brand h2 {
+    margin-bottom: 10px;
+}
+
+.footer-brand p {
+    color: #888888;
+}
+
+
+/* Enlaces */
+
+.footer-links {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+.footer-links h3 {
+    margin-bottom: 8px;
+}
+
+.footer-links a {
+    color: #888888;
+
+    text-decoration: none;
+
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #e50914;
+}
+
+
+/* Parte inferior */
+
+.footer-bottom {
+    max-width: 1200px;
+
+    margin: 50px auto 0;
+
+    padding-top: 20px;
+
+    border-top: 1px solid #222222;
+
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: #666666;
+
+    font-size: 0.85rem;
+}
+
+
+/* ANIMACIÓN */
+
+/*
+   El contenido del Hero aparece desde abajo
+   mientras aumenta progresivamente su opacidad.
+*/
+
+@keyframes aparecer {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* DISEÑO RESPONSIVE - TABLET */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        padding: 20px 30px;
+    }
+
+    .movies-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero {
+        min-height: 600px;
+        padding-left: 6%;
+    }
+
+}
+
+
+/* DISEÑO RESPONSIVE - CELULAR */
+
+@media (max-width: 600px) {
+
+    /* Navegación */
+
+    .navbar {
+        flex-direction: column;
+
+        gap: 20px;
+
+        padding: 20px;
+    }
+
+    .nav-links {
+        gap: 15px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    .nav-links a {
+        font-size: 0.9rem;
+    }
+
+
+    /* Hero */
+
+    .hero {
+        min-height: 650px;
+
+        padding:
+            150px
+            25px
+            70px;
+
+        background-position: center;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .hero-description {
+        font-size: 1rem;
+    }
+
+
+    /* Secciones */
+
+    .upcoming,
+    .about {
+        padding:
+            60px
+            25px;
+    }
+
+    .section-header h2,
+    .about h2 {
+        font-size: 2rem;
+    }
+
+
+    /* Películas */
+
+    .movies-grid {
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+    }
+
+    .movie-card img {
+        height: 450px;
+    }
+
+
+    /* Footer */
+
+    .footer {
+        padding:
+            50px
+            25px
+            20px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+    }
+
+}

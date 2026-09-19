@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contacto | CineMax</title>
+
+    <link rel="icon" type="image/png" href="img/cinemax-icon.png">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <!-- ENCABEZADO Y NAVEGACIÓN -->
+    <header id="main-header" class="header">
+
+        <nav class="navbar">
+
+            <!-- Logo -->
+            <a href="index.html" class="logo">
+                CineMax
+            </a>
+
+            <!-- Menú de navegación -->
+            <ul class="nav-links">
+
+                <li>
+                    <a href="index.html">
+                        Inicio
+                    </a>
+                </li>
+
+				<li>
+					<a href="listings.html">
+						En Cartelera
+					</a>
+				</li>
+
+                <li>
+                    <a href="premieres.html">
+                        Estrenos
+                    </a>
+                </li>
+
+				<li>
+                    <a href="prices.html">
+                        Precios
+                    </a>
+                </li>
+
+                <li>
+					<a href="contact.html" class="active">
+						Contacto
+                    </a>
+                </li>
+
+				<li>
+					<a href="info.html">
+						Sobre CineMax
+					</a>
+				</li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+
+
+        <!-- ENCABEZADO DE LA PÁGINA -->
+        <section class="page-header">
+
+            <div class="page-header-content">
+
+                <p class="section-subtitle">
+                    CINEMAX
+                </p>
+
+                <h1>
+                    Contáctanos
+                </h1>
+
+                <p>
+                    ¿Tienes alguna pregunta, sugerencia o comentario?
+                    Envíanos un mensaje.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- SECCIÓN DE CONTACTO -->
+        <section class="contact-section">
+
+            <div class="contact-container">
+
+
+                <!-- INFORMACIÓN -->
+                <div class="contact-info">
+
+                    <p class="section-subtitle">
+                        PONTE EN CONTACTO
+                    </p>
+
+                    <h2>
+                        Nos interesa conocer tu opinión
+                    </h2>
+
+                    <p>
+                        CineMax es un sitio web dedicado a
+                        presentar información sobre películas,
+                        próximos estrenos y producciones que
+                        actualmente se encuentran en cartelera.
+                    </p>
+
+                    <p>
+                        Utiliza el formulario para enviar una
+                        pregunta, sugerencia o comentario sobre
+                        el sitio o nuestros servicios.
+                    </p>
+
+
+                    <!-- Datos de contacto -->
+                    <div class="contact-details">
+
+                        <div class="contact-item">
+
+                            <h3>
+                                Correo electrónico
+                            </h3>
+
+                            <p>
+                                contacto@cinemaxcolombia.com
+                            </p>
+
+                        </div>
+
+
+                        <div class="contact-item">
+
+                            <h3>
+                                Horario de atención
+                            </h3>
+
+                            <p>
+                                Lunes a viernes
+                                <br>
+                                10:00 a. m. - 6:00 p. m.
+                            </p>
+
+							<p>
+                                Sábados
+                                <br>
+                                10:00 a. m. - 1:00 p. m.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- FORMULARIO -->
+                <div class="contact-form-container">
+
+                    <form
+						id="contact-form"
+                        class="contact-form"
+                        action="#successful-message"
+                        method="GET"
+                    >
+
+                        <!-- Nombre -->
+                        <div class="form-group">
+
+                            <label for="nombre">
+                                Nombre completo
+                            </label>
+
+                            <input
+                                type="text"
+                                id="nombre"
+                                name="nombre"
+                                placeholder="Ingresa tu nombre"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- Correo -->
+                        <div class="form-group">
+
+                            <label for="correo">
+                                Correo electrónico
+                            </label>
+
+                            <input
+                                type="email"
+                                id="correo"
+                                name="correo"
+                                placeholder="ejemplo@correo.com"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- Asunto -->
+                        <div class="form-group">
+
+                            <label for="asunto">
+                                Asunto
+                            </label>
+
+                            <input
+                                type="text"
+                                id="asunto"
+                                name="asunto"
+                                placeholder="¿Sobre qué quieres escribir?"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- Mensaje -->
+                        <div class="form-group">
+
+                            <label for="mensaje">
+                                Mensaje
+                            </label>
+
+                            <textarea
+                                id="mensaje"
+                                name="mensaje"
+                                rows="7"
+                                placeholder="Escribe tu mensaje..."
+                                required
+                            ></textarea>
+
+                        </div>
+
+
+                        <!-- Botón -->
+                        <button
+                            type="submit"
+                            class="btn"
+                        >
+                            Enviar mensaje
+                        </button>
+
+                    </form>
+
+					<div id="successful-message" class="successful-message">
+						¡Tu mensaje ha sido enviado con éxito!
+					</div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="footer">
+
+        <div class="footer-content">
+
+
+            <!-- Información del sitio -->
+            <div class="footer-brand">
+
+                <h2>
+                    CineMax
+                </h2>
+
+                <p>
+                    Una nueva aventura te espera en el cine.
+                </p>
+
+            </div>
+
+
+            <!-- Navegación -->
+            <div class="footer-links">
+
+                <h3>
+                    Navegación
+                </h3>
+
+                <a href="index.html">
+                    Inicio
+                </a>
+
+				<a href="listings.html">
+					En Cartelera
+				</a>
+
+                <a href="premieres.html">
+                    Estrenos
+                </a>
+
+				<a href="prices.html">
+                    Precios
+                </a>
+
+				<a href="contact.html">
+					Contacto
+				</a>
+
+                <a href="info.html">
+                    Sobre CineMax
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                &#169; 2026 CineMax
+            </p>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
